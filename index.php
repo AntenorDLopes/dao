@@ -41,16 +41,26 @@
 	$usuario->login("fer","doe");
 	echo $usuario;
 	===============================*/
+
 	/*==============================
 	//INSERE UM NOVO USUARIO NO BANCO
 	$usuario = new Usuario("tttt","fffffff");
 	$usuario->insert();
 	echo "$usuario";
 	===============================*/
+
+	/*==============================
+	//ALTERAR UM  USUARIO NO BANCO
 	$usuario = new Usuario();
 	$usuario->loadById(8);
 
 	$usuario->update("professor","!@#$%¨&*(");
 	echo "$usuario";
+	===============================*/
+	$usuario = new Usuario();
+	$usuario->loadById(6);
+	$usuario->delete();
+	echo $usuario;
+
 
  ?>
