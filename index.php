@@ -35,10 +35,22 @@
 	echo json_encode($search);
 	===============================*/
 
+	/*==============================
 	//CARREGA UM USUARIO USANDO UM LOGIN E SENHA
 	$usuario = new Usuario();
 	$usuario->login("fer","doe");
 	echo $usuario;
+	===============================*/
+	/*==============================
+	//INSERE UM NOVO USUARIO NO BANCO
+	$usuario = new Usuario("tttt","fffffff");
+	$usuario->insert();
+	echo "$usuario";
+	===============================*/
+	$usuario = new Usuario();
+	$usuario->loadById(8);
 
+	$usuario->update("professor","!@#$%¨&*(");
+	echo "$usuario";
 
  ?>
